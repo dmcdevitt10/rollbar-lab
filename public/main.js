@@ -10,14 +10,14 @@ function addAnimal(e){
         animal: animalInput.value
     }
 
-    axios.post("http://localhost:5070/add", body).then((res) => {
+    axios.post(`${__dirname}/add`, body).then((res) => {
         console.log(res.data)
     })
     animalInput.value = ''
 }
 
 function getAnimals(){
-    axios.get("http://localhost:5070/get").then((res) => {
+    axios.get(`${__dirname}/get`).then((res) => {
         animalList.innerHTML = ''
         res.data.forEach(e => {
             let animal = document.createElement('li')

@@ -16,7 +16,7 @@ rollbar.log('Hello world!')
 
 let animals = []
 
-app.post('/add', (req, res) => {
+app.post(`/add`, (req, res) => {
     animals.push(req.body)
     rollbar.info('someone added an animal')
     res.status(200).send(animals)
