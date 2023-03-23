@@ -10,9 +10,7 @@ function addAnimal(e){
         animal: animalInput.value
     }
 
-    axios.post('/add', body).then((res) => {
-        console.log(res.data)
-    })
+    axios.post('/add', body)
     animalInput.value = ''
 }
 
@@ -24,7 +22,6 @@ function getAnimals(){
             animal.innerText = e.animal
             animalList.appendChild(animal)
         })
-        console.log(res.data)
     })
 }
 
